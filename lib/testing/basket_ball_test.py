@@ -1,8 +1,6 @@
-from basket_ball import (
+from app import (
     num_points_per_game, player_age,
-    team_colors, team_names,
-    player_numbers, player_stats,
-    average_rebounds_by_shoe_brand
+    team_colors, team_names, player_numbers, player_stats, average_rebounds_by_shoe_brand
 )
 
 import io
@@ -90,4 +88,4 @@ class TestBasketBall:
       sys.stdout = captured_out
       average_rebounds_by_shoe_brand()
       sys.stdout = sys.__stdout__
-      assert(captured_out.getvalue() == "Nike:  4.93\nAdidas:  7.07\nPuma:  8.50\nJordan:  3.80\n")
+      assert captured_out.getvalue() == "Nike: 4.93\nAdidas: 7.07\nPuma: 8.50\nJordan: 3.80\n"
